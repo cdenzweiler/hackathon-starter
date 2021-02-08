@@ -7,7 +7,7 @@ Starter code for the Social App capstone project. See my.kenzie for details.
 
 ## Getting Started
 
-1. Go to the profile page `pages/Profile.js`
+<!-- 1. Go to the profile page `pages/Profile.js` -->
 2. Add new components in the `render` method
 3. Review the example component, Messages `components/messages/Messages.js`
 4. Take note of the `withAsyncAction` function
