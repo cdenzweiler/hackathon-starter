@@ -1,4 +1,5 @@
 import React from "react";
+import './app/.css';
 import Menu from "../components/menu/Menu";
 import Messages from "../components/messages/Messages"
 import { userIsAuthenticated } from "../redux/HOCs";
