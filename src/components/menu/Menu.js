@@ -18,6 +18,13 @@ class Menu extends React.Component {
             <Link to="/" onClick={this.handleLogout}>
               Logout
             </Link>
+
+            <div id="">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_P6-tqpU0_UtGO9J3nka-78zFR-GIz3QhRA&usqp=CAU"/>
+
+
+
+            </div>
           </div>
         )}
       </div>

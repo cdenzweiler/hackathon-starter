@@ -12,3 +12,31 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+body{
+  margin: 0px;
+  padding: 0px;
+  background:tan;
+}
+
+form > div {
+  margin-bottom: 0.5rem;
+}
+
+label {
+  margin-right: 0.5rem;
+}
+
+input {
+  border: 1px solid rgba(0, 0 ,0, 0.5);
+  font-size: 1rem;
+  padding: 4px;
+}
+
+button {
+  background: #7067CFAA;
+  padding: 4px;
+  border: 1px solid rgba(0, 0 ,0, 0.5);
+  color: white;
+  font-size: 1rem;
+  width: 100%;
+}

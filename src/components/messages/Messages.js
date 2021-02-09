@@ -27,6 +27,19 @@ class Messages extends React.Component {
     })
   }
 
+  grabAPicture =()=>{
+    this.props.getPicture(this.props.username)
+    .then((res)=>{
+      console.log(res)
+      
+    })
+      
+    .catch((err)=>{
+      console.log(err)
+    })
+    
+  
+
   newMessageHandler = () => {
     let text = this.state.message;
     this.props.createMessage(text).then(() => {
@@ -43,16 +56,16 @@ class Messages extends React.Component {
     data[event.target.name] = event.target.value;   
 
     this.setState(data);
-  }
+  }}
 
   render() {
-    let display = (<div>No Messages Found</div>)
+    let display=(<div>No Messages Found</div>)
     if (this.state.messages) {
       display = this.state.messages.map((value) => {
         return (
           <li key={value.id}>{value.text}</li>
         )
-      })
+      });
     }
 
     return (
@@ -68,5 +81,6 @@ class Messages extends React.Component {
     );
   }
 }
+
 
 export default withAsyncAction("profile", "all")(Messages);
