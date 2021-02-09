@@ -134,13 +134,15 @@ export const getPicture = (username) => dispatch => {
 
   return fetch(url + "/users/" + username +  "/picture/?t=" + d, {
     method: "GET",
-    headers: jsonHeaders
+    headers: {  ContentType: 'image/jpeg', accept: 'image/png' }
   })
-    .then(handleJsonResponse)
+    .then(result => {
+      return result.blob()
+    })
     .then(result => {
       return dispatch({
         type: GETPICTURE.SUCCESS,
-        payload: result
+        payload: URL.createObjectURL(result)
       });
     })
     .catch(err => {
